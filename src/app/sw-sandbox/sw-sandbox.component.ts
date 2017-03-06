@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgServiceWorker } from '@angular/service-worker';
 import 'isomorphic-fetch';
+import { IndexedDBService } from '../services/indexedDB.service';
+
 
 declare var fetch;
 
@@ -15,12 +17,55 @@ export class SwSandboxComponent implements OnInit {
   private swScope: string = './';
   private swUrl: string = './worker-basic.min.js';
 
-  constructor(public sw: NgServiceWorker) {
+  constructor(public sw: NgServiceWorker, public indexedDB: IndexedDBService) {
   }
 
   ngOnInit() {
     this.sw.log().subscribe(message => console.log(message));
+
+    this.openDB("Angular2IndexedDB");
+
   }
+
+  openDB(dbName: string) {
+
+        // Opens the database.
+        this.indexedDB.openDBAsync(dbName, 1).forEach(
+
+            // Next.
+            (readyState: string) => {
+
+                console.log('IndexedDB service: opening db: ' + readyState);
+
+            }, null
+
+        ).then(
+
+            () => {
+
+                // Gets all records from "TodoStore".
+                this.indexedDB.getAllRecordsAsync("TodoStore").forEach(
+
+                    // Next.
+                    (record: any) => {
+
+                        // Adds next record to the Todos entity.
+                        if (record != null) {
+
+                          console.log(record)
+
+                            //this.entity.addTodo(record);
+
+                        }
+
+                    }, null
+
+                ).then(() => console.log('IndexedDB service: obtaining of all records completed.'))
+            }
+
+            );
+
+    }
 
   checkServiceWorker(): void {
 

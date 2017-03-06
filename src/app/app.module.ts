@@ -9,7 +9,7 @@ import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import {AppShellModule} from '@angular/app-shell'
+import { IndexedDBService } from './services/indexedDB.service'; // IndexedDBService class.
 
 
 @NgModule({
@@ -21,10 +21,9 @@ import {AppShellModule} from '@angular/app-shell'
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    AppShellModule
+    MaterialModule
   ],
-  providers: [],
+  providers: [IndexedDBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
