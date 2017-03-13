@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build-prod": "ng build --prod && node src/service-worker/rollup.js"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

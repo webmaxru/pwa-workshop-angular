@@ -4,18 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
 
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import { IndexedDBService } from './services/indexedDB.service'; // IndexedDBService class.
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SwSandboxComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +19,7 @@ import { IndexedDBService } from './services/indexedDB.service'; // IndexedDBSer
     HttpModule,
     MaterialModule
   ],
-  providers: [IndexedDBService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
