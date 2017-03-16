@@ -8,10 +8,12 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
+import { MyFeedsComponent } from './my-feeds/my-feeds.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyFeedsComponent
   ],
   imports: [
     BrowserModule,
