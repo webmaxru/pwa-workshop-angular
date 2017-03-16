@@ -1,0 +1,13 @@
+{
+  "routing": {
+    "index": "/index.html",
+    "routes": {
+      "/": {
+        "prefix": false
+      },
+      "/other-route": {
+        "prefix": true
+      }
+    }
+  }
+}
