@@ -9,11 +9,13 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 import { MyFeedsComponent } from './my-feeds/my-feeds.component';
+import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFeedsComponent
+    MyFeedsComponent,
+    SwSandboxComponent
   ],
   imports: [
     BrowserModule,

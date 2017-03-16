@@ -12,5 +12,9 @@
         "prefix": false
       }
     }
+  },
+  "push": {
+    "showNotifications": true,
+    "backgroundOnly": false
   }
 }
