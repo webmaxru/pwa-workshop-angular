@@ -5,8 +5,11 @@
       "/": {
         "prefix": false
       },
-      "/other-route": {
+      "/some/routes-group-prefix": {
         "prefix": true
+      },
+      "/some/specific-route": {
+        "prefix": false
       }
     }
   }
