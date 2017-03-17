@@ -2,6 +2,8 @@
 
 ![Angular Mobile Toolkit Workshop](https://github.com/webmaxru/pwa-workshop-angular/raw/master/src/assets/images/logo.png "Angular Mobile Toolkit Workshop")
 
+[Slidedeck](https://slides.com/webmax/pwa-ng-nl/)
+
 
 ## Prerequisites
 1. Latest stable versions of `node`, `npm` installed.
