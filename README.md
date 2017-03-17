@@ -1,4 +1,7 @@
-# A simple app for the PWA Workshop
+# A simple app for the Angular Mobile Toolkit Workshop
+
+![Angular Mobile Toolkit Workshop](https://github.com/webmaxru/pwa-workshop-angular/raw/master/src/assets/images/logo.png "Angular Mobile Toolkit Workshop")
+
 
 ## Prerequisites
 1. Latest stable versions of `node`, `npm` installed.
