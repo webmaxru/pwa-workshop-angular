@@ -1,5 +1,5 @@
 {
- "static.ignore": [
-   "^\/assets\/ignore.*$"
- ]
+  "static.ignore": [
+    "^\/assets\/ignore.*$"
+  ]
 }
