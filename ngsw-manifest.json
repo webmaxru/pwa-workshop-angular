@@ -22,5 +22,14 @@
         "match": "regex"
       }
     }
+  },
+  "external": {
+    "urls": [{
+      "url": "https://fonts.googleapis.com/css?family=Material+Icons"
+    }, {
+      "url": "https://fonts.googleapis.com/css?family=Roboto:400,300"
+    }, {
+      "url": "https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"
+    }]
   }
 }
