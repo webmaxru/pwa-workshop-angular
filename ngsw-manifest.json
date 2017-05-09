@@ -34,35 +34,34 @@
   },
   "dynamic": {
     "group": [{
-        "name": "Favorites",
+        "name": "favorites",
         "urls": {
-          "/favorites": {
+          "http://localhost:3000/favorites/": {
             "match": "prefix"
           }
         },
         "cache": {
           "optimizeFor": "performance",
           "strategy": "lru",
-          "maxAgeMs": 10000,
+          "maxAgeMs": 3600000,
           "maxEntries": 2
         }
       },
       {
-        "name": "Timeline",
+        "name": "timeline",
         "urls": {
-          "/timeline": {
+          "http://localhost:3000/timeline/": {
             "match": "prefix"
           }
         },
         "cache": {
           "optimizeFor": "freshness",
           "strategy": "fifo",
-          "maxAgeMs": 10000,
+          "maxAgeMs": 3600000,
           "maxEntries": 2,
-          "networkTimeoutMs": 200
+          "networkTimeoutMs": 1000
         }
       }
     ]
   }
-
 }
