@@ -1,25 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { NgServiceWorker } from '@angular/service-worker';
 import 'isomorphic-fetch';
-
 declare var fetch;
 
 @Component({
   selector: 'app-sw-sandbox',
   templateUrl: './sw-sandbox.component.html',
-  styleUrls: ['./sw-sandbox.component.css'],
-  providers: [NgServiceWorker]
+  styleUrls: ['./sw-sandbox.component.css']
 })
 export class SwSandboxComponent implements OnInit {
 
   private swScope: string = './';
   private swUrl: string = './worker-basic.min.js';
 
-  constructor(public sw: NgServiceWorker) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.sw.log().subscribe(message => console.log(message));
   }
 
   checkServiceWorker(): void {
@@ -41,28 +37,6 @@ export class SwSandboxComponent implements OnInit {
       .then(value => {
         console.log(value);
       })
-  }
-
-  forceUpdate(): void {
-
-    this
-      .sw
-      .checkForUpdate()
-      .subscribe(res => {
-        console.log(JSON.stringify(res));
-      });
-
-  }
-
-  pingCompanion(): void {
-
-    this
-      .sw
-      .ping()
-      .subscribe(undefined, undefined, () => {
-        console.log('pong');
-      });
-
   }
 
   loadCacheKeys(): void {
@@ -173,29 +147,5 @@ export class SwSandboxComponent implements OnInit {
       })
 
   }
-
-  registerForPush(): void {
-
-    this
-      .sw
-      .registerForPush()
-      .subscribe(handler => {
-        console.log(JSON.stringify({
-          url: handler.url,
-          key: handler.key(),
-          auth: handler.auth()
-        }));
-      });
-
-    this
-      .sw
-      .push
-      .map(value => JSON.stringify(value))
-      .subscribe(value => {
-        console.log(value)
-      });
-
-  }
-
 
 }
