@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import 'isomorphic-fetch';
 declare var fetch;
 
+import { NgServiceWorker } from '@angular/service-worker';
+
 @Component({
   selector: 'app-sw-sandbox',
   templateUrl: './sw-sandbox.component.html',
@@ -12,10 +14,11 @@ export class SwSandboxComponent implements OnInit {
   private swScope: string = './';
   private swUrl: string = './worker-basic.min.js';
 
-  constructor() {
+  constructor(public sw: NgServiceWorker) {
   }
 
   ngOnInit() {
+    this.sw.log().subscribe(message => console.log(message));
   }
 
   checkServiceWorker(): void {
@@ -147,5 +150,51 @@ export class SwSandboxComponent implements OnInit {
       })
 
   }
+
+  forceUpdate(): void {
+
+    this
+      .sw
+      .checkForUpdate()
+      .subscribe(res => {
+        console.log(JSON.stringify(res));
+      });
+
+  }
+
+  pingCompanion(): void {
+
+    this
+      .sw
+      .ping()
+      .subscribe(undefined, undefined, () => {
+        console.log('pong');
+      });
+
+  }
+
+  registerForPush(): void {
+
+    this
+      .sw
+      .registerForPush()
+      .subscribe(handler => {
+        console.log(JSON.stringify({
+          url: handler.url,
+          key: handler.key(),
+          auth: handler.auth()
+        }));
+      });
+
+    this
+      .sw
+      .push
+      .map(value => JSON.stringify(value))
+      .subscribe(value => {
+        console.log(value)
+      });
+
+  }
+
 
 }
