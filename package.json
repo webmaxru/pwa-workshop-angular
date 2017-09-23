@@ -20,7 +20,7 @@
     "@angular/core": "^4.2.1",
     "@angular/forms": "^4.2.1",
     "@angular/http": "^4.2.1",
-    "@angular/material": "^2.0.0-beta.6",
+    "@angular/material": "2.0.0-beta.6",
     "@angular/platform-browser": "^4.2.1",
     "@angular/platform-browser-dynamic": "^4.2.1",
     "@angular/platform-server": "^4.2.1",
