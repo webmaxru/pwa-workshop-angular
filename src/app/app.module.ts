@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { MaterialModule } from '@angular/material';
+import { CustomMaterialModule } from './custom-material.module';
 import 'hammerjs';
 
 import { MyFeedsComponent } from './my-feeds/my-feeds.component';
@@ -21,7 +21,7 @@ import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
