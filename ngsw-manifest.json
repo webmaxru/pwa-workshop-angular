@@ -6,21 +6,21 @@
     "index": "/index.html",
     "routes": {
       "/": {
-        "prefix": false
+        "match": "exact"
       },
       "/some-routes-group-prefix": {
-        "prefix": true
+        "match": "prefix"
       },
       "/some-routes-group-prefix-no-files": {
-        "prefix": true,
+        "match": "prefix",
         "onlyWithoutExtension": true
       },
       "/some/specific-route": {
-        "prefix": false
+        "match": "exact"
       },
       "^/regex/.*/route$": {
         "match": "regex"
       }
     }
-  }
+  } 
 }
