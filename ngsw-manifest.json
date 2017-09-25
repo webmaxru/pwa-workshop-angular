@@ -25,19 +25,15 @@
   },
   "external": {
     "urls": [{
-      "url": "https://fonts.googleapis.com/css?family=Material+Icons"
+      "url": "http://localhost:3000/assets/css/MaterialIcons.css"
     }, {
-      "url": "https://fonts.googleapis.com/css?family=Roboto:400,300"
+      "url": "http://localhost:3000/assets/images/cb8U-gL6_normal.jpg"
     }, {
-      "url": "/assets/images/cb8U-gL6_normal.jpg"
+      "url": "http://localhost:3000/assets/images/ic_favorite_black_24px.svg"
     }, {
-      "url": "/assets/images/ic_favorite_black_24px.svg"
+      "url": "http://localhost:3000/assets/images/ic_list_black_24px.svg"
     }, {
-      "url": "/assets/images/ic_list_black_24px.svg"
-    }, {
-      "url": "/assets/fonts/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"
-    }, {
-      "url": "https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"
+      "url": "http://localhost:3000/assets/fonts/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2"
     }]
   },
   "dynamic": {
