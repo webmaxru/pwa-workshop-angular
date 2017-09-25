@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { CustomMaterialModule } from './custom-material.module';
 import 'hammerjs';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { MyFeedsComponent } from './my-feeds/my-feeds.component';
 import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
@@ -23,8 +22,7 @@ import { SwSandboxComponent } from './sw-sandbox/sw-sandbox.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CustomMaterialModule,
-    ServiceWorkerModule
+    CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
