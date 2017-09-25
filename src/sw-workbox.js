@@ -1,9 +1,9 @@
-importScripts('./workbox-sw.dev.v2.0.0.js')
+importScripts('./workbox-sw.dev.v2.0.1.js')
 
 importScripts('./workbox-routing.dev.v2.0.0.js')
 importScripts('./workbox-runtime-caching.dev.v2.0.0.js')
 importScripts('./workbox-cacheable-response.dev.v2.0.0.js')
-importScripts('./workbox-background-sync.dev.v2.0.0.js')
+importScripts('./workbox-background-sync.dev.v2.0.1.js')
 
 const workboxSW = new WorkboxSW({
   precacheChannelName: 'pwatter-channel'
