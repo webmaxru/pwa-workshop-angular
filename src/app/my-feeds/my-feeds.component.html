@@ -4,9 +4,9 @@
     <md-card-subtitle>It would be cool to have this UI available offline</md-card-subtitle>
   </md-card-header>
   <md-card-actions>
-    <button md-raised-button (click)="loadTimeLine('angular')"><img src="assets/images/ic_list_black_24px.svg" alt="" />Load @angular timeline</button>
+    <button md-raised-button (click)="loadTimeLine('angular')"><img src="http://localhost:3000/assets/images/ic_list_black_24px.svg" alt="" />Load @angular timeline</button>
     <button md-raised-button (click)="loadTimeLine('')"><md-icon>list</md-icon>Load my timeline</button>
-    <button md-raised-button (click)="loadFavorites('angular')"><img src="assets/images/ic_favorite_black_24px.svg" alt="" />Load @angular favorites</button>
+    <button md-raised-button (click)="loadFavorites('angular')"><img src="http://localhost:3000/assets/images/ic_favorite_black_24px.svg" alt="" />Load @angular favorites</button>
     <button md-raised-button (click)="loadFavorites('')"><md-icon>favorite</md-icon>Load my favorites</button>
   </md-card-actions>
   <md-card-content>
@@ -14,7 +14,7 @@
     <md-nav-list>
       <md-divider></md-divider>
       <a md-list-item *ngFor="let tweet of tweets" href="{{ 'https://twitter.com/statuses/' + tweet.id_str }}">
-        <img md-list-avatar src="assets/images/cb8U-gL6_normal.jpg" alt="{{tweet.user.name}}">
+        <img md-list-avatar src="http://localhost:3000/assets/images/cb8U-gL6_normal.jpg" alt="{{tweet.user.name}}">
         <h3 md-line>{{tweet.user.name}}</h3>
         <p md-line>
           <span>{{tweet.text}}</span>
